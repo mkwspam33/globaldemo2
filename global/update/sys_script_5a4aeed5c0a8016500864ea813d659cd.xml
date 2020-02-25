@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>true</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <claim/>
+        <client_callable>false</client_callable>
+        <collection>sys_update_set</collection>
+        <condition>current.name.changes() || current.state.changes() || current.operation() == 'delete'</condition>
+        <description>Re-populates the update set picker with the updated list of update sets when&#13;
+- The state of an update set changes to complete&#13;
+- Name of an update set is changed&#13;
+- An update set is deleted</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Refresh Update Set Picker</name>
+        <order>100</order>
+        <priority/>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[refreshUpdateSetPicker();
+
+function refreshUpdateSetPicker() {
+   var n = new UINotification('update_set_change');
+   n.setAttribute('update_only', 'true');
+   n.send();
+}
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>glide.maint</sys_created_by>
+        <sys_created_on>2009-05-19 19:14:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>5a4aeed5c0a8016500864ea813d659cd</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>Refresh Update Set Picker</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GlobalDemo2" source="2a294f7777870010ca3ab5b2681061c4">2a294f7777870010ca3ab5b2681061c4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GlobalDemo2">2a294f7777870010ca3ab5b2681061c4</sys_scope>
+        <sys_update_name>sys_script_5a4aeed5c0a8016500864ea813d659cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-25 20:48:50</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=5a4aeed5c0a8016500864ea813d659cd"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GlobalDemo2">2a294f7777870010ca3ab5b2681061c4</claim_owner_scope>
+        <claim_timestamp>1707e1c06c50000001</claim_timestamp>
+        <metadata_update_name>sys_script_5a4aeed5c0a8016500864ea813d659cd</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GlobalDemo2</previous_claim_name>
+        <previous_claim_scope>2a294f7777870010ca3ab5b2681061c4</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-25 20:48:50</sys_created_on>
+        <sys_id>b11f4b3b77870010ca3ab5b2681061e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-25 20:48:50</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GlobalDemo2">2a294f7777870010ca3ab5b2681061c4</claim_owner_scope>
+        <claim_timestamp>1707e1adcf50000001</claim_timestamp>
+        <metadata_update_name>sys_script_5a4aeed5c0a8016500864ea813d659cd</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>GlobalDemo1</previous_claim_name>
+        <previous_claim_scope>b519cb7777870010ca3ab5b2681061f1</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-25 20:48:50</sys_created_on>
+        <sys_id>391f4b3b77870010ca3ab5b2681061e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-25 20:48:50</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="GlobalDemo2">2a294f7777870010ca3ab5b2681061c4</claim_owner_scope>
+        <claim_timestamp>1707e1adc8d0000001</claim_timestamp>
+        <metadata_update_name>sys_script_5a4aeed5c0a8016500864ea813d659cd</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>com.glide.system_update_set_pick</previous_claim_name>
+        <previous_claim_scope>com.glide.system_update_set_pick</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-25 20:48:50</sys_created_on>
+        <sys_id>751f4b3b77870010ca3ab5b2681061e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-25 20:48:50</sys_updated_on>
+    </sys_claim>
+</record_update>
